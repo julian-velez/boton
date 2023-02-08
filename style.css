@@ -1,0 +1,51 @@
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: #131313;
+}
+.toggle-btn{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 80px;
+    height: 38px;
+    border: 2px solid #aaa;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+    outline: none;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+.toggle-btn::before{
+    content: "off on";
+    color: #aaa;
+    position: absolute;
+    font-weight: 700;
+    width: 28px;
+    height: 28px;
+    background-color: #aaa;
+    border-radius: 50%;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-size: 12px;
+    line-height: 28px;
+    word-spacing: 58px;
+    text-indent: -37px;
+    transition: all 0.3s;
+}
+
+.toggle-btn:checked::before {
+    left: 46px;
+    background-color: #fff;
+    color: #fff;
+}
+
+.toggle-btn:checked {
+    background-color: #39b5e0;
+    border-color: #fff;
+}
